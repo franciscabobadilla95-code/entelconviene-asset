@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Entel Conviene — Guía de Contratación</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root {
+  --blu: #1400FF;
+  --grn: #2EDBA2;
+  --grn-l: #E8FAF3;
+  --blu-l: #EEF0FF;
+  --org: #FF4F00;
+  --w: #FFFFFF;
+  --g50: #F9FAFB;
+  --g100: #F3F4F6;
+  --g200: #E5E7EB;
+  --g400: #9CA3AF;
+  --g500: #6B7280;
+  --g700: #1F2937;
+  --g900: #111827;
+  --r: 16px;
+  --rs: 12px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:var(--g50);color:var(--g900);-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:480px;margin:0 auto}
+
+.ic{width:42px;height:42px;border-radius:var(--rs);background:var(--grn-l);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ic svg{width:22px;height:22px;stroke:var(--grn);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.ic-sm{width:34px;height:34px;border-radius:10px}
+.ic-sm svg{width:18px;height:18px}
+
+/* HEADER */
+.hdr{background:var(--blu);padding:22px 20px 0;position:relative;overflow:hidden}
+.hdr::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:26px;background:var(--g50);border-radius:26px 26px 0 0}
+.hdr-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.hdr-tag{background:rgba(46,219,162,.2);color:var(--grn);font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.hdr-body{padding-bottom:38px}
+.hdr-body h1{color:#fff;font-size:26px;font-weight:800;line-height:1.2;margin-bottom:8px}
+.hdr-body h1 em{font-style:normal;color:var(--grn)}
+.hdr-body p{color:rgba(255,255,255,.65);font-size:14px;line-height:1.5}
+
+/* TABS */
+.tabs{display:flex;gap:5px;padding:4px 16px 14px;position:sticky;top:0;z-index:100;background:var(--g50)}
+.tab{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 4px;border:none;border-radius:var(--rs);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:.25s;background:var(--w);color:var(--g400);border:1.5px solid var(--g200)}
+.tab svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.tab.on-movil{background:var(--blu);color:#fff;border-color:var(--blu);box-shadow:0 4px 16px rgba(20,0,255,.2)}
+.tab.on-hogar{background:var(--org);color:#fff;border-color:var(--org);box-shadow:0 4px 16px rgba(255,79,0,.2)}
+.tab.on-info{background:var(--grn);color:#fff;border-color:var(--grn);box-shadow:0 4px 16px rgba(46,219,162,.25)}
+
+/* PANELS */
+.pnl{display:none;padding:0 16px 90px}.pnl.on{display:block;animation:up .3s ease}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* PROGRESS */
+.prog{background:var(--w);border-radius:var(--r);padding:16px;margin-bottom:14px;border:1.5px solid var(--g200);display:flex;align-items:center;gap:14px}
+.prog-ring{position:relative;width:44px;height:44px;flex-shrink:0}
+.prog-ring svg{transform:rotate(-90deg)}
+.prog-bg{stroke:var(--g100);fill:none}
+.prog-fg{stroke:var(--grn);fill:none;transition:stroke-dashoffset .5s ease}
+.prog-n{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--grn)}
+.prog-t{font-size:14px;font-weight:700}.prog-s{font-size:11px;color:var(--g400);margin-top:2px}
+
+/* SECTION */
+.slbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--g400);padding:0 4px;margin-bottom:10px}
+
+/* PREREQ */
+.preq{background:var(--w);border-radius:var(--r);border:1.5px solid var(--g200);overflow:hidden;margin-bottom:14px}
+.preq-r{display:flex;align-items:center;gap:14px;padding:15px 16px;border-bottom:1px solid var(--g50)}.preq-r:last-child{border:none}
+.preq-t strong{display:block;font-size:14px;font-weight:600;margin-bottom:2px}.preq-t span{font-size:12px;color:var(--g500);line-height:1.4}
+
+/* STEPS */
+.st{background:var(--w);border-radius:var(--r);margin-bottom:8px;border:1.5px solid var(--g200);overflow:hidden;transition:.3s}
+.st.open{border-color:var(--grn);box-shadow:0 0 0 3px rgba(46,219,162,.1)}
+.st.dn{border-color:var(--grn)}
+.st-h{display:flex;align-items:center;gap:12px;padding:15px 16px;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
+.st-n{width:36px;height:36px;border-radius:var(--rs);background:var(--grn-l);color:var(--grn);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.3s}
+.st.dn .st-n{background:var(--grn);color:#fff}
+.st-i{flex:1;min-width:0}.st-nm{font-size:14px;font-weight:700;line-height:1.3}
+.st.dn .st-nm{color:var(--g400);text-decoration:line-through}
+.st-ds{font-size:12px;color:var(--g400);margin-top:2px}
+.st-arr{color:var(--g400);transition:transform .3s;flex-shrink:0}.st-arr svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.st.open .st-arr{transform:rotate(180deg);color:var(--grn)}
+.st-b{max-height:0;overflow:hidden;transition:max-height .35s ease}.st-bi{padding:0 16px 16px}
+.st-c{background:var(--g50);border-radius:var(--rs);padding:14px 16px;font-size:14px;line-height:1.65;color:var(--g700);margin-bottom:10px}
+.st-c strong{color:var(--blu);font-weight:600}
+
+.tip{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:#FFFBEB;border:1px solid #FEF3C7;border-radius:var(--rs);font-size:12.5px;line-height:1.5;color:#92400E;margin-bottom:10px}
+.tip svg{width:18px;height:18px;stroke:#F59E0B;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none;flex-shrink:0;margin-top:1px}
+
+.subs{list-style:none;padding:0;margin:8px 0}.subs li{display:flex;align-items:center;gap:10px;padding:9px 0;font-size:13px;color:var(--g700);border-bottom:1px solid var(--g50)}.subs li:last-child{border:none}
+.sub-m{width:26px;height:26px;border-radius:8px;background:var(--grn-l);color:var(--grn);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
+
+.nbtn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:12px;border:none;border-radius:var(--rs);background:var(--grn);color:#fff;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.2s;margin-top:4px}
+.nbtn:active{transform:scale(.98);opacity:.85}
+.nbtn svg{width:18px;height:18px;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;fill:none}
+
+/* CHECKLIST */
+.ckl{background:var(--w);border-radius:var(--r);padding:18px;margin-top:12px;border:2px solid var(--grn)}
+.ck-t{font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.ck-t svg{width:20px;height:20px;stroke:var(--grn);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.ck-r{display:flex;align-items:center;gap:10px;padding:9px 0;font-size:13px;color:var(--g700);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.ck-b{width:24px;height:24px;border:2px solid var(--g200);border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.2s}
+.ck-b.on{background:var(--grn);border-color:var(--grn)}.ck-b svg{width:14px;height:14px;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;fill:none;opacity:0;transition:.2s}.ck-b.on svg{opacity:1}
+
+/* CONTACT */
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.ct-c{background:var(--w);border:1.5px solid var(--g200);border-radius:var(--rs);padding:16px;text-decoration:none;text-align:center;transition:.2s;display:block}
+.ct-c:active{border-color:var(--grn);background:var(--grn-l)}
+.ct-c .ic{margin:0 auto 8px}
+.ct-l{display:block;font-size:11px;color:var(--g400);font-weight:500;margin-bottom:2px}.ct-v{font-size:14px;font-weight:700;color:var(--g900)}
+.wlnk{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--w);border:1.5px solid var(--g200);border-radius:var(--rs);padding:14px;text-decoration:none;font-size:13px;font-weight:600;color:var(--blu);transition:.2s}.wlnk:active{background:var(--blu-l)}
+.wlnk svg{width:18px;height:18px;stroke:var(--blu);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+
+/* SHARE */
+.shr{background:var(--w);border:1.5px solid var(--g200);border-radius:var(--r);padding:18px;margin-top:14px}
+.shr h4{font-size:14px;font-weight:700;margin-bottom:4px}.shr p{font-size:12px;color:var(--g500);line-height:1.5;margin-bottom:14px}
+.sh-o{display:flex;flex-direction:column;gap:8px}.sh-i{display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--g50);border-radius:var(--rs);font-size:13px;color:var(--g700);line-height:1.4}.sh-i strong{color:var(--g900);font-weight:600}
+
+.prv{display:flex;align-items:center;gap:10px;margin-top:16px;padding:12px 14px;background:var(--grn-l);border-radius:var(--rs);font-size:12px;color:var(--g500);line-height:1.5}
+.prv svg{width:18px;height:18px;stroke:var(--grn);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-top">
+    <div style="background:#fff;border-radius:10px;padding:4px 12px;display:inline-flex;align-items:center"><img src="data:image/png;base64,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" alt="Entel" style="height:28px;width:auto;display:block"></div>
+    <span class="hdr-tag">Conviene</span>
+  </div>
+  <div class="hdr-body">
+    <h1>Guía de<br>Contratación <em>Rápida</em></h1>
+    <p>Paso a paso con validación biométrica, directo desde tu celular.</p>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab on-movil" onclick="sw('movil',this)"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>Móvil</button>
+  <button class="tab" onclick="sw('hogar',this)"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1z"/></svg>Hogar</button>
+  <button class="tab" onclick="sw('info',this)"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Info</button>
+</div>
+
+<!-- INFO -->
+<div class="pnl" id="p-info">
+  <div class="slbl">Antes de empezar</div>
+  <div class="preq">
+    <div class="preq-r"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="9" x2="12" y2="9"/><line x1="7" y1="13" x2="10" y2="13"/><circle cx="16" cy="11" r="2"/></svg></div><div class="preq-t"><strong>Cédula de identidad</strong><span>Necesitarás el N° de serie (reverso)</span></div></div>
+    <div class="preq-r"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="preq-t"><strong>Email activo</strong><span>Para confirmaciones y seguimiento</span></div></div>
+    <div class="preq-r"><div class="ic"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><div class="preq-t"><strong>Celular con cámara</strong><span>Para escanear QR y biometría facial</span></div></div>
+    <div class="preq-r"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="preq-t"><strong>Documento vínculo laboral</strong><span>Certificado, liquidación o contrato · PDF/JPG/PNG · máx 15 MB</span></div></div>
+  </div>
+  <div class="slbl">Canales de ayuda</div>
+  <div class="ct-grid">
+    <a href="tel:800123656" class="ct-c"><div class="ic ic-sm" style="margin:0 auto 8px"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></div><span class="ct-l">Móvil</span><span class="ct-v">800 123 656</span></a>
+    <a href="tel:800123716" class="ct-c"><div class="ic ic-sm" style="margin:0 auto 8px"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1z"/></svg></div><span class="ct-l">Hogar</span><span class="ct-v">800 123 716</span></a>
+  </div>
+  <a href="https://entelconviene.entel.cl" class="wlnk" target="_blank"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>entelconviene.entel.cl</a>
+  <div class="shr" style="margin-top:20px">
+    <div class="slbl" style="margin-bottom:8px">Cómo compartir esta guía</div>
+    <div class="sh-o">
+      <div class="sh-i"><div class="ic ic-sm"><svg viewBox="0 0 24 24"><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/></svg></div><div><strong>SharePoint / Intranet</strong><br>Sube el .html para acceso permanente.</div></div>
+      <div class="sh-i"><div class="ic ic-sm"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div><strong>Hosting gratuito</strong><br>GitHub Pages o Netlify → URL pública.</div></div>
+      <div class="sh-i"><div class="ic ic-sm"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><strong>Email directo</strong><br>Adjunta el .html, se abre en el celular.</div></div>
+      <div class="sh-i"><div class="ic ic-sm"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><div><strong>Código QR</strong><br>Genera un QR apuntando a la URL.</div></div>
+    </div>
+  </div>
+  <div class="prv"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span>Tus datos aparecen como <strong>[DATO OCULTO]</strong> para tu privacidad.</span></div>
+</div>
+
+<!-- MÓVIL -->
+<div class="pnl on" id="p-movil">
+  <div class="prog"><div class="prog-ring"><svg width="44" height="44" viewBox="0 0 44 44"><circle class="prog-bg" cx="22" cy="22" r="18" stroke-width="4"/><circle class="prog-fg" id="ring-movil" cx="22" cy="22" r="18" stroke-width="4" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg><span class="prog-n" id="cnt-movil">0/9</span></div><div><div class="prog-t" id="lbl-movil">Comienza tu contratación</div><div class="prog-s">Servicio Móvil · 9 pasos</div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">1</div><div class="st-i"><div class="st-nm">Elige tu plan</div><div class="st-ds">Selecciona plan y tipo de línea</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Ingresa a <strong>entelconviene.entel.cl</strong>, haz clic en <strong>Planes</strong> y escoge el que más te acomode.</div>
+    <div style="background:#EEF0FF;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="15" y="15" width="68" height="70" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/>
+<rect x="105" y="8" width="70" height="84" rx="10" fill="#fff" stroke="#2EDBA2" stroke-width="2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="195" y="15" width="68" height="70" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/>
+<rect x="112" y="2" width="56" height="12" rx="6" fill="#2EDBA2" stroke="none"/><text x="140" y="11" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#fff">Destacado</text>
+<line x1="118" y1="30" x2="162" y2="30" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="118" y1="40" x2="155" y2="40" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="58" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1400FF">$12.990</text><text x="158" y="58" font-family="sans-serif" font-size="7" fill="#9CA3AF">/mes</text>
+<rect x="115" y="68" width="50" height="16" rx="8" fill="#1400FF" stroke="none"/><text x="140" y="79" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#fff">Lo quiero</text>
+<polyline points="88,50 100,50" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3"/><polyline points="180,50 192,50" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3"/>
+</svg></div>
+    <div class="tip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Puedes comparar y volver atrás sin perder datos.</div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">2</div><div class="st-i"><div class="st-nm">Tipo de contratación</div><div class="st-ds">Línea nueva o portabilidad</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Selecciona si quieres una <strong>línea nueva</strong> o <strong>portar tu número</strong> desde otro operador.</div>
+    <div style="background:#F0FDF4;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(40,12)"><rect width="76" height="76" rx="12" fill="#fff" stroke="#2EDBA2" stroke-width="2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="38" cy="30" r="14" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="38" y1="22" x2="38" y2="38" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="30" x2="46" y2="30" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="38" y="64" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="600" fill="#1F2937">Línea nueva</text></g>
+<g transform="translate(164,12)"><rect width="76" height="76" rx="12" fill="#fff" stroke="#1400FF" stroke-width="2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="28,26 38,30 28,34" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="48,34 38,30 48,26" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="28" y1="30" x2="48" y2="30" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="38" x2="48" y2="38" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="28,34 38,38 28,42" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/>
+<text x="38" y="64" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="600" fill="#1F2937">Portabilidad</text></g>
+<text x="140" y="55" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#9CA3AF">ó</text>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">3</div><div class="st-i"><div class="st-nm">Contrata Online</div><div class="st-ds">Selecciona el canal digital</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Haz clic en el botón <strong>"Contrata Online"</strong> para iniciar el proceso digital.</div>
+    <div style="background:#EEF0FF;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="55" y="6" width="170" height="88" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="55" y1="22" x2="225" y2="22" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="67" cy="14" r="3" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="77" cy="14" r="3" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="87" cy="14" r="3" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="100" y="10" width="70" height="8" rx="4" fill="#E5E7EB" stroke="none"/>
+<rect x="95" y="56" width="90" height="24" rx="12" fill="#1400FF" stroke="none"/>
+<text x="140" y="72" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#fff">Lo quiero</text>
+<path d="M198,72 L198,84 L203,80 L208,86" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">4</div><div class="st-i"><div class="st-nm">Completa tus datos</div><div class="st-ds">Formulario + N° serie cédula</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Llena el formulario con tus datos personales y el <strong>N° de serie de tu cédula</strong>. Acepta las políticas de protección de datos.</div>
+    <div style="background:#FFFBF5;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="50" y="5" width="180" height="90" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="65" y="22" font-family="sans-serif" font-size="7" fill="#9CA3AF">Nombre completo</text><line x1="65" y1="30" x2="215" y2="30" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="65" y="42" font-family="sans-serif" font-size="7" fill="#9CA3AF">RUT</text><line x1="65" y1="50" x2="145" y2="50" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="155" y="42" font-family="sans-serif" font-size="7" fill="#9CA3AF">N° Serie cédula</text><line x1="155" y1="50" x2="215" y2="50" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="65" y="60" width="28" height="20" rx="4" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="75" cy="66" r="3" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="72" y1="74" x2="86" y2="74" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210,58 L215,63 L205,73 L200,73 L200,68 Z" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+    <div class="tip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>El N° de serie está al reverso, bajo el código de barras.</div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">5</div><div class="st-i"><div class="st-nm">Escanea el QR</div><div class="st-ds">Pasa al celular para validación</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Aparecerá un <strong>código QR</strong> en pantalla. Escanéalo con tu celular para continuar la validación biométrica.</div>
+    <div style="background:#F5F3FF;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="100" y="8" width="80" height="80" rx="8" fill="#fff" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="112" y="20" width="16" height="16" rx="2" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="115" y="23" width="10" height="10" rx="1" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="152" y="20" width="16" height="16" rx="2" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="155" y="23" width="10" height="10" rx="1" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="112" y="60" width="16" height="16" rx="2" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="115" y="63" width="10" height="10" rx="1" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="140" y1="44" x2="140" y2="52" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="150" y1="50" x2="158" y2="50" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="62" x2="165" y2="62" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="22" y="20" width="36" height="56" rx="6" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="36" y1="68" x2="44" y2="68" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="40" cy="44" r="8" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="44" r="3" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="62" y1="38" x2="96" y2="38" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4" opacity=".5"/><line x1="62" y1="46" x2="96" y2="46" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4" opacity=".5"/><line x1="62" y1="54" x2="96" y2="54" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4" opacity=".5"/>
+</svg></div>
+    <div class="tip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Si estás en el celular, el QR se abre automáticamente.</div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">6</div><div class="st-i"><div class="st-nm">Validación biométrica</div><div class="st-ds">5 subpasos desde tu celular</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Desde tu celular, sigue estas instrucciones:</div>
+    <div style="background:#E8FAF3;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(5,10)"><rect width="60" height="38" rx="5" fill="#fff" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="18" cy="16" r="5" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="13" y1="26" x2="23" y2="26" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="12" x2="48" y2="12" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="18" x2="44" y2="18" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="24" x2="48" y2="24" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="30" y="52" font-family="sans-serif" font-size="7" fill="#9CA3AF">Frente</text></g>
+<g transform="translate(5,60)"><rect width="60" height="30" rx="5" fill="#fff" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="8" y1="10" x2="52" y2="10" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="16" x2="38" y2="16" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="22" x2="52" y2="22" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<polyline points="72,40 86,46" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3"/>
+<g transform="translate(98,12)"><circle cx="35" cy="32" r="28" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,3"/>
+<circle cx="35" cy="26" r="9" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M20,46 Q27,38 35,38 Q43,38 50,46" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="35" y="72" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#9CA3AF">Videoselfie</text></g>
+<polyline points="172,46 186,46" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3"/>
+<g transform="translate(196,28)"><circle cx="18" cy="18" r="16" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="10,18 16,24 26,12" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g>
+</svg></div>
+    <ul class="subs">
+      <li><span class="sub-m">a</span>Lee las instrucciones iniciales</li>
+      <li><span class="sub-m">b</span>Foto del <strong>frente</strong> de tu cédula</li>
+      <li><span class="sub-m">c</span>Foto del <strong>reverso</strong> de tu cédula</li>
+      <li><span class="sub-m">d</span><strong>Videoselfie</strong> de tu rostro</li>
+      <li><span class="sub-m">e</span>Espera confirmación</li>
+    </ul>
+    <div class="tip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Busca buena iluminación y evita reflejos en la cédula.</div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">7</div><div class="st-i"><div class="st-nm">Validación automática</div><div class="st-ds">El sistema revisa tus datos</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">El sistema verifica tu identidad automáticamente. Toma solo unos segundos.</div>
+    <div style="background:#EEF0FF;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="85" y="8" width="110" height="84" rx="12" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="140" cy="40" r="16" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="70,30" opacity=".7">
+<animateTransform attributeName="transform" type="rotate" from="0 140 40" to="360 140 40" dur="1.5s" repeatCount="indefinite"/></circle>
+<path d="M134,40 L138,44 L146,36" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="74" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#9CA3AF">Verificando identidad...</text>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">8</div><div class="st-i"><div class="st-nm">Despacho</div><div class="st-ds">Confirma dirección de envío</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Ingresa tu <strong>dirección de despacho</strong> donde recibirás tu chip o equipo.</div>
+    <div style="background:#FFFBF5;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="8" width="135" height="84" rx="8" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="34" y="26" font-family="sans-serif" font-size="7" fill="#9CA3AF">Dirección de envío</text><line x1="34" y1="34" x2="140" y2="34" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="34" y="48" font-family="sans-serif" font-size="7" fill="#9CA3AF">Comuna</text><line x1="34" y1="56" x2="100" y2="56" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="120" cy="70" r="5" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M120,75 L120,82" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(185,18)"><rect width="50" height="38" rx="4" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="0" y1="14" x2="50" y2="14" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="25" y1="14" x2="25" y2="38" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5,50 L45,50" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="55" r="5" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="36" cy="55" r="5" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<polyline points="160,50 180,50" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3"/>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="movil"><div class="st-h" onclick="tgl(this)"><div class="st-n">9</div><div class="st-i"><div class="st-nm">¡Solicitud exitosa!</div><div class="st-ds">Guarda tu N° de solicitud</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">¡Listo! Anota tu <strong>número de solicitud</strong> o toma un pantallazo. Recibirás un email de confirmación.</div>
+    <div style="background:#E8FAF3;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<circle cx="140" cy="44" r="30" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/><polyline points="125,44 135,54 155,32" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+<line x1="100" y1="18" x2="95" y2="8" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/><line x1="110" y1="15" x2="108" y2="5" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/>
+<line x1="170" y1="15" x2="172" y2="5" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/><line x1="180" y1="18" x2="185" y2="8" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/>
+<line x1="105" y1="72" x2="100" y2="78" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".3"/><line x1="175" y1="72" x2="180" y2="78" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".3"/>
+<polygon points="88,34 90,39 95,39 91,42 92,47 88,44 84,47 85,42 81,39 86,39" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".3"/>
+<polygon points="195,29 197,34 202,34 198,37 199,42 195,39 191,42 192,37 188,34 193,34" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".3"/>
+<text x="140" y="90" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2EDBA2">¡Solicitud exitosa!</text>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Completado</button>
+  </div></div></div>
+
+  <div class="ckl"><div class="ck-t"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Checklist final</div>
+    <div class="ck-r" onclick="chk(this)"><div class="ck-b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>N° de solicitud guardado</div>
+    <div class="ck-r" onclick="chk(this)"><div class="ck-b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Email de confirmación recibido</div>
+    <div class="ck-r" onclick="chk(this)"><div class="ck-b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Próximos pasos claros</div>
+  </div>
+</div>
+
+<!-- HOGAR -->
+<div class="pnl" id="p-hogar">
+  <div class="prog"><div class="prog-ring"><svg width="44" height="44" viewBox="0 0 44 44"><circle class="prog-bg" cx="22" cy="22" r="18" stroke-width="4"/><circle class="prog-fg" id="ring-hogar" cx="22" cy="22" r="18" stroke-width="4" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg><span class="prog-n" id="cnt-hogar">0/7</span></div><div><div class="prog-t" id="lbl-hogar">Comienza tu contratación</div><div class="prog-s">Servicio Hogar · 7 pasos</div></div></div>
+
+  <div class="st" data-g="hogar"><div class="st-h" onclick="tgl(this)"><div class="st-n">1</div><div class="st-i"><div class="st-nm">Elige tu plan Hogar</div><div class="st-ds">Presiona "Lo quiero"</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">En <strong>entelconviene.entel.cl</strong> revisa los planes Hogar y presiona <strong>"Lo quiero"</strong>.</div>
+    <div style="background:#FFFBF5;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="75" y="6" width="130" height="88" rx="12" fill="#fff" stroke="#2EDBA2" stroke-width="2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="104" y="0" width="72" height="12" rx="6" fill="#2EDBA2" stroke="none"/><text x="140" y="9" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#fff">Plan Destacado</text>
+<path d="M120,28 L140,18 L160,28" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="125" y="28" width="30" height="18" rx="2" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="134" y="34" width="12" height="12" rx="1" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="62" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="800" fill="#1400FF">$18.490</text><text x="172" y="62" font-family="sans-serif" font-size="7" fill="#9CA3AF">/mes</text>
+<rect x="105" y="72" width="70" height="18" rx="9" fill="#1400FF" stroke="none"/><text x="140" y="84" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#fff">Lo quiero</text>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="hogar"><div class="st-h" onclick="tgl(this)"><div class="st-n">2</div><div class="st-i"><div class="st-nm">Contrata Online</div><div class="st-ds">Selecciona el canal digital</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Haz clic en <strong>"Contrata Online"</strong> para avanzar.</div>
+    <div style="background:#EEF0FF;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="55" y="6" width="170" height="88" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="55" y1="22" x2="225" y2="22" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="67" cy="14" r="3" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="77" cy="14" r="3" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="87" cy="14" r="3" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="100" y="10" width="70" height="8" rx="4" fill="#E5E7EB" stroke="none"/>
+<rect x="95" y="56" width="90" height="24" rx="12" fill="#1400FF" stroke="none"/>
+<text x="140" y="72" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#fff">Lo quiero</text>
+<path d="M198,72 L198,84 L203,80 L208,86" stroke="#1F2937" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="hogar"><div class="st-h" onclick="tgl(this)"><div class="st-n">3</div><div class="st-i"><div class="st-nm">Factibilidad</div><div class="st-ds">Verifica cobertura en tu dirección</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Ingresa tu <strong>dirección completa</strong> (calle, número, depto, comuna). El sistema verificará cobertura.</div>
+    <div style="background:#EEF0FF;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<rect x="40" y="6" width="200" height="88" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="55" y="16" width="170" height="16" rx="4" fill="none" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="66" cy="24" r="4" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="69" y1="27" x2="72" y2="30" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="27" font-family="sans-serif" font-size="7" fill="#9CA3AF">Av. Providencia 123, Santiago</text>
+<g transform="translate(116,40)"><path d="M20,0 C10,0 2,8 2,18 C2,28 20,38 20,38 C20,38 38,28 38,18 C38,8 30,0 20,0Z" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="16" r="6" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(180,52)"><circle cx="14" cy="14" r="12" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="8,14 12,18 20,10" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g>
+<text x="197" y="78" font-family="sans-serif" font-size="7" font-weight="600" fill="#2EDBA2">Cobertura OK</text>
+</svg></div>
+    <div class="tip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>¿Sin cobertura? Llama al 800 123 716.</div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="hogar"><div class="st-h" onclick="tgl(this)"><div class="st-n">4</div><div class="st-i"><div class="st-nm">Pack y adicionales</div><div class="st-ds">Confirma servicios incluidos</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Revisa los servicios de tu pack. Agrega adicionales si quieres y confirma.</div>
+    <div style="background:#F5F3FF;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(18,12)"><rect width="70" height="76" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35,50 L35,50" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M25,44 Q35,34 45,44" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18,38 Q35,24 52,38" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="35" cy="52" r="2" fill="#1400FF" stroke="none"/>
+<text x="35" y="68" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="600" fill="#1F2937">Internet</text></g>
+<g transform="translate(105,12)"><rect width="70" height="76" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="18" y="30" width="34" height="22" rx="3" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="56" x2="42" y2="56" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="35" y1="52" x2="35" y2="56" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="35" y="68" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="600" fill="#1F2937">TV</text></g>
+<g transform="translate(192,12)"><rect width="70" height="76" rx="10" fill="#fff" stroke="#E5E7EB" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22,32 Q22,30 25,30 L30,30 L32,34 L28,38 Q34,44 40,40 L44,36 L48,38 L48,42 Q48,44 44,44 L38,44 Q28,44 22,38 Z" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="35" y="68" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="600" fill="#1F2937">Telefonía</text></g>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="hogar"><div class="st-h" onclick="tgl(this)"><div class="st-n">5</div><div class="st-i"><div class="st-nm">Datos + Biometría</div><div class="st-ds">Formulario y QR para validación</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Completa tus datos y escanea el <strong>código QR</strong> para la validación biométrica (fotos de cédula + videoselfie).</div>
+    <div style="background:#E8FAF3;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(5,10)"><rect width="60" height="38" rx="5" fill="#fff" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="18" cy="16" r="5" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="13" y1="26" x2="23" y2="26" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="12" x2="48" y2="12" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="18" x2="44" y2="18" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="24" x2="48" y2="24" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="30" y="52" font-family="sans-serif" font-size="7" fill="#9CA3AF">Frente</text></g>
+<g transform="translate(5,60)"><rect width="60" height="30" rx="5" fill="#fff" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="8" y1="10" x2="52" y2="10" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="16" x2="38" y2="16" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="22" x2="52" y2="22" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<polyline points="72,40 86,46" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3"/>
+<g transform="translate(98,12)"><circle cx="35" cy="32" r="28" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,3"/>
+<circle cx="35" cy="26" r="9" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M20,46 Q27,38 35,38 Q43,38 50,46" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="35" y="72" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#9CA3AF">Videoselfie</text></g>
+<polyline points="172,46 186,46" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3"/>
+<g transform="translate(196,28)"><circle cx="18" cy="18" r="16" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="10,18 16,24 26,12" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="hogar"><div class="st-h" onclick="tgl(this)"><div class="st-n">6</div><div class="st-i"><div class="st-nm">Datos empresa + Documento</div><div class="st-ds">Sube tu vínculo laboral</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">Ingresa datos de tu empresa y sube un documento válido:</div>
+    <div style="background:#FFFBF5;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(35,6)"><path d="M10,0 L55,0 L72,15 L72,88 L10,88 Q5,88 5,83 L5,5 Q5,0 10,0Z" fill="#fff" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M55,0 L55,15 L72,15" fill="none" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="16" y1="30" x2="58" y2="30" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="16" y1="40" x2="50" y2="40" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="16" y1="50" x2="56" y2="50" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="16" y1="60" x2="42" y2="60" stroke="#9CA3AF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="54" cy="72" r="8" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3"/><polyline points="50,72 53,75 58,69" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(155,22)"><rect width="75" height="55" rx="10" fill="none" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5"/>
+<polyline points="38,40 38,18" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="30,25 38,16 46,25" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="38" y="62" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#9CA3AF">Subir archivo</text>
+<text x="38" y="74" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#9CA3AF">PDF · JPG · PNG</text></g>
+</svg></div>
+    <ul class="subs">
+      <li><span class="sub-m"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--grn);stroke-width:2;fill:none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>Certificado de antigüedad</li>
+      <li><span class="sub-m"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--grn);stroke-width:2;fill:none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>Extracto de liquidación</li>
+      <li><span class="sub-m"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--grn);stroke-width:2;fill:none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>Contrato de trabajo</li>
+    </ul>
+    <div class="tip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>PDF, JPG o PNG · máximo 15 MB.</div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Listo</button>
+  </div></div></div>
+
+  <div class="st" data-g="hogar"><div class="st-h" onclick="tgl(this)"><div class="st-n">7</div><div class="st-i"><div class="st-nm">¡Proceso completado!</div><div class="st-ds">Guarda tu N° de orden</div></div><div class="st-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="st-b"><div class="st-bi">
+    <div class="st-c">¡Listo! Guarda tu <strong>número de orden</strong> y revisa tu email para los pasos de instalación.</div>
+    <div style="background:#E8FAF3;border-radius:14px;padding:16px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 280 100" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(92,2)"><path d="M48,18 L5,42 L15,42 L15,78 L81,78 L81,42 L91,42 Z" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+<rect x="32" y="55" width="16" height="23" rx="2" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="56" y="48" width="14" height="14" rx="1" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="48" cy="32" r="2" fill="#2EDBA2" stroke="none"/><path d="M40,28 Q48,20 56,28" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M34,24 Q48,14 62,24" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<circle cx="212" cy="28" r="14" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="205,28 210,33 219,23" stroke="#2EDBA2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+<line x1="78" y1="14" x2="73" y2="4" stroke="#1400FF" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/><line x1="202" y1="14" x2="207" y2="4" stroke="#FF4F00" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/>
+<text x="140" y="96" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2EDBA2">¡Instalación en camino!</text>
+</svg></div>
+    <button class="nbtn" onclick="dn(this)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Completado</button>
+  </div></div></div>
+
+  <div class="ckl"><div class="ck-t"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Checklist final</div>
+    <div class="ck-r" onclick="chk(this)"><div class="ck-b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>N° de orden guardado</div>
+    <div class="ck-r" onclick="chk(this)"><div class="ck-b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Email de confirmación recibido</div>
+    <div class="ck-r" onclick="chk(this)"><div class="ck-b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Pasos de instalación claros</div>
+  </div>
+</div>
+
+<script>
+const C=2*Math.PI*18;
+function sw(id,b){document.querySelectorAll('.pnl').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.tab').forEach(t=>{t.className='tab'});document.getElementById('p-'+id).classList.add('on');b.classList.add('on-'+id)}
+function tgl(h){const s=h.parentElement,b=s.querySelector('.st-b'),o=s.classList.contains('open');s.closest('.pnl').querySelectorAll('.st.open').forEach(c=>{if(c!==s){c.classList.remove('open');c.querySelector('.st-b').style.maxHeight='0'}});if(o){s.classList.remove('open');b.style.maxHeight='0'}else{s.classList.add('open');b.style.maxHeight=b.scrollHeight+'px'}}
+function dn(btn){const s=btn.closest('.st'),g=s.dataset.g;s.classList.add('dn');s.classList.remove('open');s.querySelector('.st-b').style.maxHeight='0';const n=s.nextElementSibling;if(n&&n.classList.contains('st')&&!n.classList.contains('dn')){setTimeout(()=>{n.classList.add('open');n.querySelector('.st-b').style.maxHeight=n.querySelector('.st-b').scrollHeight+'px';n.scrollIntoView({behavior:'smooth',block:'center'})},300)}up(g)}
+function up(g){const a=document.querySelectorAll(`.st[data-g="${g}"]`),d=document.querySelectorAll(`.st[data-g="${g}"].dn`),p=d.length/a.length;document.getElementById('ring-'+g).style.strokeDashoffset=C*(1-p);document.getElementById('cnt-'+g).textContent=d.length+'/'+a.length;const l=document.getElementById('lbl-'+g);if(p===1)l.textContent='¡Completado!';else if(p>.5)l.textContent='¡Ya falta poco!';else if(p>0)l.textContent='Vas avanzando...'}
+function chk(r){r.querySelector('.ck-b').classList.toggle('on')}
+</script>
+</body></html>
